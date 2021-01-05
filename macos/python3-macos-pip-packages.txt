@@ -1,0 +1,12 @@
+numpy
+scipy
+netcdf4
+pyproj
+seaborn
+cartopy
+pygrib
+Cython
+ipython
+pyyaml
+git+https://github.com/snowman2/cartopy.git@5e624fe
+git+https://github.com/matplotlib/basemap.git

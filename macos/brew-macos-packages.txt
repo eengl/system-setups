@@ -1,0 +1,12 @@
+Lmod
+eccodes
+gcc
+geos
+hdf5
+nco
+netcdf
+openconnect
+openmpi
+proj
+stoken
+wget
