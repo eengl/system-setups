@@ -1,0 +1,36 @@
+# ----------------------------------------------------------------------------------------
+# .bash_functions
+# ----------------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------------
+# Function: startSSHAgent
+# ----------------------------------------------------------------------------------------
+startSSHAgent()
+{
+   eval `ssh-agent` 1> /dev/null 2>&1
+   if [ $? -eq 0 ]; then
+      ssh-add 1> /dev/null 2>&1
+      echo -e "\n * Starting SSH Agent... \n"
+      echo -e " * SSH Agent PID = $SSH_AGENT_PID"
+      echo -e " * SSH Agent Socket = $SSH_AUTH_SOCK\n"
+   else
+      echo -e "\n * Error: Trouble starting SSH agent.\n"
+      exit 1
+   fi
+}
+
+# ----------------------------------------------------------------------------------------
+# Function: stopSSHAgent
+# ----------------------------------------------------------------------------------------
+stopSSHAgent()
+{
+   ssh-agent -k 1> /dev/null 2>&1
+   if [ $? -eq 0 ]; then
+      echo -e "\n * Stopping SSH Agent... \n"
+      unset SSH_AGENT_PID
+      unset SSH_AUTH_SOCK
+   else
+      echo -e "\n * Error: Trouble stopping SSH agent.\n"
+   fi
+
+}
