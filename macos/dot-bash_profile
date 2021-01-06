@@ -29,6 +29,7 @@ export MANPATH=$BASH_HOME/share/man:$HOME/.local/share/man:$MANPATH
 # Aliases
 # ----------------------------------------------------------------------------------------
 alias admin="sudo su -"
+alias ldd="otool -L"
 alias ls="ls -G"
 alias h="history"
 
