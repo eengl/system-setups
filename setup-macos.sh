@@ -4,6 +4,8 @@
 # Setup script for macOS
 # ---------------------------------------------------------------------------------------- 
 
+THISDIR=$PWD
+
 # ---------------------------------------------------------------------------------------- 
 # Create directories
 # ---------------------------------------------------------------------------------------- 
@@ -21,9 +23,12 @@ cp macos/dot-bash_profile $HOME/.bash_profile
 if [ -f $HOME/.profile ]; then
    cp $HOME/.profile $HOME/.profile.ORIG
 fi
-ln -s $HOME/.bash_profile $HOME/.profile
-cp macos/dot-bash-logout $HOME/.bash_logout
+cp macos/dot-bash_logout $HOME/.bash_logout
 cp common/dot-bash_functions $HOME/.bash_functions
+
+cd $HOME
+ln -sf .bash_profile .profile
+cd $THISDIR
 
 # ---------------------------------------------------------------------------------------- 
 # Vim config file
