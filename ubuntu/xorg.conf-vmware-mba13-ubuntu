@@ -1,0 +1,123 @@
+Section "ServerLayout"
+	Identifier     "X.org Configured"
+	Screen      0  "Screen0" 0 0
+	InputDevice    "Mouse0" "CorePointer"
+	InputDevice    "Keyboard0" "CoreKeyboard"
+EndSection
+
+Section "Files"
+	ModulePath   "/usr/lib/xorg/modules"
+	FontPath     "/usr/share/fonts/X11/misc"
+	FontPath     "/usr/share/fonts/X11/cyrillic"
+	FontPath     "/usr/share/fonts/X11/100dpi/:unscaled"
+	FontPath     "/usr/share/fonts/X11/75dpi/:unscaled"
+	FontPath     "/usr/share/fonts/X11/Type1"
+	FontPath     "/usr/share/fonts/X11/100dpi"
+	FontPath     "/usr/share/fonts/X11/75dpi"
+	FontPath     "built-ins"
+EndSection
+
+Section "Module"
+	Load  "glx"
+EndSection
+
+Section "InputDevice"
+	Identifier  "Keyboard0"
+	Driver      "kbd"
+EndSection
+
+Section "InputDevice"
+	Identifier  "Mouse0"
+	Driver      "mouse"
+	Option	    "Protocol" "auto"
+	Option	    "Device" "/dev/input/mice"
+	Option	    "ZAxisMapping" "4 5 6 7"
+EndSection
+
+Section "Monitor"
+	Identifier   "Virtual1"
+	VendorName   "Monitor Vendor"
+	ModelName    "Monitor Model"
+	# 2560x1440 59.96 Hz (CVT 3.69M9) hsync: 89.52 kHz; pclk: 312.25 MHz
+	Modeline "2560x1440_60.00"  312.25  2560 2752 3024 3488  1440 1443 1448 1493 -hsync +vsync
+        # 1440x900 59.89 Hz (CVT 1.30MA) hsync: 55.93 kHz; pclk: 106.50 MHz
+        Modeline "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync
+	Option "PreferredMode" "1440x900_60.00"
+EndSection
+
+Section "Device"
+        ### Available Driver options are:-
+        ### Values: <i>: integer, <f>: float, <bool>: "True"/"False",
+        ### <string>: "String", <freq>: "<f> Hz/kHz/MHz",
+        ### <percent>: "<f>%"
+        ### [arg]: arg optional
+        #Option     "HWcursor"           	# [<bool>]
+        #Option     "Xinerama"           	# [<bool>]
+        #Option     "StaticXinerama"     	# <str>
+        #Option     "GuiLayout"          	# <str>
+        #Option     "AddDefaultMode"     	# [<bool>]
+        #Option     "RenderAccel"        	# [<bool>]
+        #Option     "DRI"                	# [<bool>]
+        #Option     "DirectPresents"     	# [<bool>]
+        #Option     "HWPresents"         	# [<bool>]
+        #Option     "RenderCheck"        	# [<bool>]
+	Identifier  "Card0"
+	Driver      "vmware"
+	BusID       "PCI:0:15:0"
+EndSection
+
+Section "Device"
+        ### Available Driver options are:-
+        ### Values: <i>: integer, <f>: float, <bool>: "True"/"False",
+        ### <string>: "String", <freq>: "<f> Hz/kHz/MHz",
+        ### <percent>: "<f>%"
+        ### [arg]: arg optional
+        #Option     "SWcursor"           	# [<bool>]
+        #Option     "kmsdev"             	# <str>
+        #Option     "ShadowFB"           	# [<bool>]
+	Identifier  "Card1"
+	Driver      "modesetting"
+	BusID       "PCI:0:15:0"
+EndSection
+
+Section "Device"
+        ### Available Driver options are:-
+        ### Values: <i>: integer, <f>: float, <bool>: "True"/"False",
+        ### <string>: "String", <freq>: "<f> Hz/kHz/MHz",
+        ### <percent>: "<f>%"
+        ### [arg]: arg optional
+        #Option     "ShadowFB"           	# [<bool>]
+        #Option     "Rotate"             	# <str>
+        #Option     "fbdev"              	# <str>
+        #Option     "debug"              	# [<bool>]
+	Identifier  "Card2"
+	Driver      "fbdev"
+	BusID       "PCI:0:15:0"
+EndSection
+
+Section "Device"
+        ### Available Driver options are:-
+        ### Values: <i>: integer, <f>: float, <bool>: "True"/"False",
+        ### <string>: "String", <freq>: "<f> Hz/kHz/MHz",
+        ### <percent>: "<f>%"
+        ### [arg]: arg optional
+        #Option     "ShadowFB"           	# [<bool>]
+        #Option     "DefaultRefresh"     	# [<bool>]
+        #Option     "ModeSetClearScreen" 	# [<bool>]
+	Identifier  "Card3"
+	Driver      "vesa"
+	BusID       "PCI:0:15:0"
+EndSection
+
+Section "Screen"
+	Identifier "Screen0"
+	Device     "Card0"
+	Monitor    "Virtual1"
+	DefaultDepth	24
+	SubSection "Display"
+		Viewport   0 0
+		Modes "1440x900_60.0"
+		Depth     24
+	EndSubSection
+EndSection
+
