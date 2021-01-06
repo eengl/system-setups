@@ -1,0 +1,8 @@
+ControlMaster auto
+ControlPath ~/.ssh/tmp/%h_%p_%r
+
+TCPKeepAlive yes
+ServerAliveInterval 300
+ForwardAgent yes
+ForwardX11Trusted yes
+ForwardX11 yes
