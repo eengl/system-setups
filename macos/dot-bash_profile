@@ -18,6 +18,7 @@ set -o vi
 export EDITOR="vim"                       # Default editor
 export HISTSIZE=10000                     # Large shell command history
 export PS1="\u@\h:\w $ "                  # Custom Prompt
+export FIGNORE="$FIGNORE:DS_Store"        # Remove DS_Store files from tab completion
 
 # ----------------------------------------------------------------------------------------
 # Append to PATH and MANPATH
