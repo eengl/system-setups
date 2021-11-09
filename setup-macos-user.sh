@@ -19,12 +19,12 @@ mkdir -p .vim/swapfiles
 if [ -f $HOME/.bash_profile ]; then
    cp $HOME/.bash_profile $HOME/.bash_profile.ORIG
 fi
-cp macos/dot-bash_profile $HOME/.bash_profile
+cp -v macos/dot-bash_profile $HOME/.bash_profile
 if [ -f $HOME/.profile ]; then
    cp $HOME/.profile $HOME/.profile.ORIG
 fi
-cp macos/dot-bash_logout $HOME/.bash_logout
-cp common/dot-bash_functions $HOME/.bash_functions
+cp -v macos/dot-bash_logout $HOME/.bash_logout
+cp -v common/dot-bash_functions $HOME/.bash_functions
 
 cd $HOME
 ln -sf .bash_profile .profile
@@ -33,9 +33,14 @@ cd $THISDIR
 # ---------------------------------------------------------------------------------------- 
 # Vim config file
 # ---------------------------------------------------------------------------------------- 
-cp common/dot-vimrc $HOME/.vimrc
+cp -v common/dot-vimrc $HOME/.vimrc
 
 # ---------------------------------------------------------------------------------------- 
 # SSH config file
 # ---------------------------------------------------------------------------------------- 
-cp common/ssh-config $HOME/.ssh/config
+cp -v common/ssh-config $HOME/.ssh/config
+
+# ---------------------------------------------------------------------------------------- 
+# macOS-specific script
+# ---------------------------------------------------------------------------------------- 
+cp -v macos/scripts/* $HOME/.local/bin/.
