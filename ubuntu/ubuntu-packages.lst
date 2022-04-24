@@ -10,8 +10,6 @@ gcc
 gfortran
 git
 gnome-shell-extension-dash-to-panel
-gnome-sushi
-gnome-tweaks
 htop
 ipython3
 libnetcdf*
@@ -34,7 +32,6 @@ openssh-server
 pcscd
 pcsc-tools
 p7zip-full
-python3
 python3-pip
 python3-cartopy
 python3-dev
