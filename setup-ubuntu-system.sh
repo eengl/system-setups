@@ -39,13 +39,6 @@ if [ $? -ne 0 ]; then
 fi
 
 # ---------------------------------------------------------------------------------------- 
-# Install 1Password
-# ---------------------------------------------------------------------------------------- 
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
-add-apt-repository 'deb [arch=amd64] https://onepassword.s3.amazonaws.com/linux/debian edge main'
-apt install 1password
-
-# ---------------------------------------------------------------------------------------- 
 # Set memory paging/swapping settings
 # ---------------------------------------------------------------------------------------- 
 echo "" >> /etc/sysctl.conf
