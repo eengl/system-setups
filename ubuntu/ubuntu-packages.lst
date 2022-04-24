@@ -46,6 +46,7 @@ python3-yaml
 qrencode
 screenfetch
 secure-delete
+sshpass
 stoken
 subversion
 vim
