@@ -9,7 +9,6 @@ g++
 gcc
 gfortran
 git
-gnome-shell-extension-dash-to-panel
 htop
 ipython3
 libnetcdf*
