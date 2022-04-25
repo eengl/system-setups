@@ -9,6 +9,7 @@ g++
 gcc
 gfortran
 git
+gnutls-bin
 htop
 ipython3
 libnetcdf*
