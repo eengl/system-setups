@@ -16,6 +16,7 @@ libnetcdf*
 libnetcdff*
 libappindicator1
 libindicator7
+libncurses5-dev
 libxss1
 ncview
 net-tools
