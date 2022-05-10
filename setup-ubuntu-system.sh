@@ -26,7 +26,7 @@ fi
 # Install packages
 # ---------------------------------------------------------------------------------------- 
 apt-get update
-apt-get install $(cat ubuntu/ubuntu-packages.lst)
+apt-get install $(cat ubuntu/ubuntu-packages.txt)
 
 # ---------------------------------------------------------------------------------------- 
 #  Check if Google Chrome is installed.  If not download and install
