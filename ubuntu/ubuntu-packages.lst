@@ -9,15 +9,14 @@ g++
 gcc
 gfortran
 git
-gnome-shell-extension-dash-to-panel
-gnome-sushi
-gnome-tweaks
+gnutls-bin
 htop
 ipython3
 libnetcdf*
 libnetcdff*
 libappindicator1
 libindicator7
+libncurses5-dev
 libxss1
 ncview
 net-tools
@@ -34,7 +33,6 @@ openssh-server
 pcscd
 pcsc-tools
 p7zip-full
-python3
 python3-pip
 python3-cartopy
 python3-dev
@@ -50,6 +48,7 @@ python3-yaml
 qrencode
 screenfetch
 secure-delete
+sshpass
 stoken
 subversion
 vim

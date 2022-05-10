@@ -47,8 +47,3 @@ mkdir -p $HOME/.vim/swapfiles
 # ---------------------------------------------------------------------------------------- 
 mkdir -p $HOME/.ssh/tmp
 cp common/ssh-config $HOME/.ssh/config
-
-# ---------------------------------------------------------------------------------------- 
-# Enable minimize on click
-# ---------------------------------------------------------------------------------------- 
-gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
