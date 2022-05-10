@@ -24,7 +24,7 @@ if [ ! -d $HOME/.local/bin ]; then mkdir -p $HOME/.local/bin; fi
 # ---------------------------------------------------------------------------------------- 
 mv $HOME/.bash_profile $HOME/.bash_profile.ORIG
 cp fedora/dot-bash_profile $HOME/.bash_profile
-ln -s .bash_profile .profile
+ln -s $HOME/.bash_profile $HOME/.profile
 cp common/dot-bash_functions $HOME/.bash_functions
 
 # ---------------------------------------------------------------------------------------- 
