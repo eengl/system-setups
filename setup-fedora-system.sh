@@ -55,3 +55,9 @@ update-crypto-policies --set LEGACY
 echo "" >> /etc/sysctl.conf
 echo "vm.swappiness = 10" >> /etc/sysctl.conf
 echo "vm.vfs_cache_pressure = 50" >> /etc/sysctl.conf
+
+# ---------------------------------------------------------------------------------------- 
+# Start SSH Server
+# ---------------------------------------------------------------------------------------- 
+systemctl enable sshd
+systemctl start sshd
