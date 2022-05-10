@@ -17,7 +17,7 @@ fi
 # ---------------------------------------------------------------------------------------- 
 # Make a local bin directory
 # ---------------------------------------------------------------------------------------- 
-mkdir -p $HOME/.local/bin
+if [ ! -d $HOME/.local/bin ]; then mkdir -p $HOME/.local/bin; fi
 
 # ---------------------------------------------------------------------------------------- 
 # Update .bashrc 
@@ -39,6 +39,10 @@ mv $HOME/.profile $HOME/.profile.BAK
 cp ubuntu/dot-bash_profile $HOME/.bash_profile
 ln -s .bash_profile .profile
 cp common/dot-bash_functions $HOME/.bash_functions
+
+# ---------------------------------------------------------------------------------------- 
+# Setup VIM
+# ---------------------------------------------------------------------------------------- 
 cp common/dot-vimrc $HOME/.vimrc
 mkdir -p $HOME/.vim/swapfiles
 
