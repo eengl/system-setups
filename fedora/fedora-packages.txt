@@ -1,4 +1,5 @@
 cmake
+dejavu-fonts-all
 g++
 gcc
 gfortran
