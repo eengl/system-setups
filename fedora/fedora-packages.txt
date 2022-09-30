@@ -2,6 +2,8 @@ cmake
 dejavu-fonts-all
 g++
 gcc
+geos
+geos-devel
 gfortran
 liberation-fonts
 libpng
@@ -20,6 +22,8 @@ openjpeg2
 openjpeg2-devel
 openssl
 openssl-devel
+proj
+proj-devel
 python3-devel
 python3-pip
 #qt5
