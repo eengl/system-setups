@@ -2,6 +2,7 @@ cmake
 dejavu-fonts-all
 g++
 gcc
+gcc-gfortran
 geos
 geos-devel
 gfortran
@@ -12,7 +13,6 @@ libpng
 libpng-devel
 libxml2
 libxml2-devel
-ncurses-compat-libs
 netcdf
 netcdf-devel
 netcdf-static
