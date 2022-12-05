@@ -1,5 +1,6 @@
 cmake
 dejavu-fonts-all
+doxygen
 g++
 gcc
 gcc-gfortran
