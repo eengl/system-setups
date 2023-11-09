@@ -28,26 +28,28 @@ echo "   . ~/.bash_profile" >> /tmp/add_to_bashrc
 echo "fi" >> /tmp/add_to_bashrc
 PERMS=$(stat -c "%a" $HOME/.bashrc)
 cat $HOME/.bashrc /tmp/add_to_bashrc > /tmp/new_bashrc
-cp $HOME/.bashrc $HOME/.bashrc.BAK
-cp /tmp/new_bashrc $HOME/.bashrc
+cp -v $HOME/.bashrc $HOME/.bashrc.BAK
+cp -v /tmp/new_bashrc $HOME/.bashrc
 chmod $PERMS $HOME/.bashrc
 
 # ---------------------------------------------------------------------------------------- 
 # Copy in .bash_profile and other hidden config files
 # ---------------------------------------------------------------------------------------- 
 mv $HOME/.profile $HOME/.profile.BAK
-cp ubuntu/dot-bash_profile $HOME/.bash_profile
+cp -v ubuntu/dot-bash_profile $HOME/.bash_profile
 ln -s .bash_profile .profile
-cp common/dot-bash_functions $HOME/.bash_functions
+cp -v common/dot-bash_functions $HOME/.bash_functions
 
 # ---------------------------------------------------------------------------------------- 
 # Setup VIM
 # ---------------------------------------------------------------------------------------- 
-cp common/dot-vimrc $HOME/.vimrc
+cp -v common/dot-vimrc $HOME/.vimrc
 mkdir -p $HOME/.vim/swapfiles
+mkdir -p $HOME/.vim/colors
+cp -v common/afterglow.vim $HOME/.vim/colors/afterglow.vim
 
 # ---------------------------------------------------------------------------------------- 
 # Setup SSH
 # ---------------------------------------------------------------------------------------- 
 mkdir -p $HOME/.ssh/tmp
-cp common/ssh-config $HOME/.ssh/config
+cp -v common/ssh-config $HOME/.ssh/config

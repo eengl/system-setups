@@ -37,11 +37,15 @@ dnf install $(grep -v '^#' fedora/fedora-packages.txt)
 # ---------------------------------------------------------------------------------------- 
 #  Check if Google Chrome is installed.  If not download and install
 # ---------------------------------------------------------------------------------------- 
-CHROMEURL="https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
-rpm -qa google-chrome-stable > /dev/null
-if [ $? -ne 0 ]; then
-   wget -P /tmp $CHROMEURL
-   rpm -ivh /tmp/google-chrome-stable_current_x86_64.rpm
+if [[ $(uname -m) == "x86_64" ]]; then
+   CHROMEURL="https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
+   rpm -qa google-chrome-stable > /dev/null
+   if [ $? -ne 0 ]; then
+      wget -P /tmp $CHROMEURL
+      rpm -ivh /tmp/google-chrome-stable_current_x86_64.rpm
+   fi
+else
+   dnf install chromium
 fi
 
 # ---------------------------------------------------------------------------------------- 

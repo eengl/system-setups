@@ -23,18 +23,20 @@ if [ ! -d $HOME/.local/bin ]; then mkdir -p $HOME/.local/bin; fi
 # Copy in .bash_profile and other hidden config files
 # ---------------------------------------------------------------------------------------- 
 mv $HOME/.bash_profile $HOME/.bash_profile.ORIG
-cp fedora/dot-bash_profile $HOME/.bash_profile
+cp -v fedora/dot-bash_profile $HOME/.bash_profile
 ln -s $HOME/.bash_profile $HOME/.profile
-cp common/dot-bash_functions $HOME/.bash_functions
+cp -v common/dot-bash_functions $HOME/.bash_functions
 
 # ---------------------------------------------------------------------------------------- 
 # Setup VIM
 # ---------------------------------------------------------------------------------------- 
-cp common/dot-vimrc $HOME/.vimrc
+cp -v common/dot-vimrc $HOME/.vimrc
 mkdir -p $HOME/.vim/swapfiles
+mkdir -p $HOME/.vim/colors
+cp -v common/afterglow.vim $HOME/.vim/colors/afterglow.vim
 
 # ---------------------------------------------------------------------------------------- 
 # Setup SSH
 # ---------------------------------------------------------------------------------------- 
 mkdir -p $HOME/.ssh/tmp
-cp common/ssh-config $HOME/.ssh/config
+cp -v common/ssh-config $HOME/.ssh/config

@@ -1,5 +1,5 @@
-ControlMaster auto
-ControlPath ~/.ssh/tmp/%h_%p_%r
+#ControlMaster auto
+#ControlPath ~/.ssh/tmp/%h_%p_%r
 
 TCPKeepAlive yes
 ServerAliveInterval 300

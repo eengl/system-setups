@@ -22,11 +22,11 @@ mkdir -p .vim/colors
 # Install user's bash profile scripts
 # ---------------------------------------------------------------------------------------- 
 if [ -f $HOME/.bash_profile ]; then
-   cp $HOME/.bash_profile $HOME/.bash_profile.ORIG
+   cp -v $HOME/.bash_profile $HOME/.bash_profile.ORIG
 fi
 cp -v macos/dot-bash_profile $HOME/.bash_profile
 if [ -f $HOME/.profile ]; then
-   cp $HOME/.profile $HOME/.profile.ORIG
+   cp -v $HOME/.profile $HOME/.profile.ORIG
 fi
 cp -v macos/dot-bash_logout $HOME/.bash_logout
 cp -v common/dot-bash_functions $HOME/.bash_functions
