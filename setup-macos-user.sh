@@ -16,6 +16,7 @@ cd $HOME
 mkdir -p .local/bin
 mkdir -p .ssh/tmp
 mkdir -p .vim/swapfiles
+mkdir -p .vim/colors
 
 # ---------------------------------------------------------------------------------------- 
 # Install user's bash profile scripts
@@ -38,6 +39,7 @@ cd $THISDIR
 # Vim config file
 # ---------------------------------------------------------------------------------------- 
 cp -v common/dot-vimrc $HOME/.vimrc
+cp -v common/afterglow.vim $HOME/.vim/colors/afterglow.vim
 
 # ---------------------------------------------------------------------------------------- 
 # SSH config file
