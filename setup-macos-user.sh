@@ -49,4 +49,4 @@ cp -v common/ssh-config $HOME/.ssh/config
 # ---------------------------------------------------------------------------------------- 
 # macOS-specific script
 # ---------------------------------------------------------------------------------------- 
-cp -v macos/scripts/* $HOME/.local/bin/.
+cp -v macos/bin/* $HOME/.local/bin/.
