@@ -23,6 +23,7 @@ scikit-image
 scikit-learn
 scipy
 setuptools
+twine
 verif
 xarray
 zarr
