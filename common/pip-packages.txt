@@ -5,6 +5,7 @@ dask
 dask-labextension
 dask-mpi
 distributed
+ipyleaflet
 ipython
 jupyterlab
 lxml
@@ -19,6 +20,7 @@ pandas
 pdoc
 pygrib
 pyproj
+pytest
 scikit-image
 scikit-learn
 scipy
