@@ -37,7 +37,7 @@ chmod $PERMS $HOME/.bashrc
 # ---------------------------------------------------------------------------------------- 
 mv $HOME/.profile $HOME/.profile.BAK
 cp -v ubuntu/dot-bash_profile $HOME/.bash_profile
-ln -s .bash_profile .profile
+ln -s $HOME/.bash_profile $HOME/.profile
 cp -v common/dot-bash_functions $HOME/.bash_functions
 
 # ---------------------------------------------------------------------------------------- 
