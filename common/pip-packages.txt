@@ -9,6 +9,7 @@ ipyleaflet
 ipython
 jupyter-console
 jupyterlab
+jupyterlab-vim
 lxml
 matplotlib
 metpy
