@@ -29,6 +29,7 @@ if [ -f $HOME/.profile ]; then
    cp -v $HOME/.profile $HOME/.profile.ORIG
 fi
 cp -v macos/dot-bash_logout $HOME/.bash_logout
+cp -v macos/dot-git-completion.bash $HOME/.git-completion.bash
 cp -v common/dot-bash_functions $HOME/.bash_functions
 
 cd $HOME
