@@ -47,6 +47,7 @@ p11-kit
 pkg-config
 proj
 pyenv
+rclone
 readline
 subversion
 tcl-tk
