@@ -12,16 +12,13 @@ git
 git-core
 gnutls-bin
 htop
-libaec
 libaec-dev
 libbz2-dev
-libffi
 libffi-dev
 libnetcdf*
 libnetcdff*
 libappindicator1
 libindicator7
-liblzma
 liblzma-dev
 libncurses5-dev
 libreadline-dev
