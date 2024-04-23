@@ -33,5 +33,7 @@ python3-devel
 python3-pip
 subversion
 tigervnc
+uxplay
 vim
+vlc
 vpnc
