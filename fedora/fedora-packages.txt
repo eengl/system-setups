@@ -19,6 +19,7 @@ libaec-devel
 liberation-fonts
 libpng
 libpng-devel
+libxcrypt-compat
 libxml2
 libxml2-devel
 ncl
