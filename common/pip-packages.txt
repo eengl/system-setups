@@ -8,10 +8,11 @@ dask-mpi
 distributed
 ipyleaflet
 ipython
-jupyter-console
 jupyterlab
+jupyter-resource-usage
 lxml
 matplotlib
+meson-python
 metpy
 mpi4py
 netCDF4
