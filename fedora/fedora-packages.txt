@@ -12,6 +12,7 @@ gcc-gfortran
 geos
 geos-devel
 gfortran
+git-gui
 jasper
 jasper-devel
 libaec
