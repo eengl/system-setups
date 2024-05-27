@@ -3,6 +3,7 @@ build
 cartopy
 cython
 dask
+dask[dataframe]
 dask-labextension
 dask-mpi
 distributed
@@ -31,5 +32,6 @@ scipy
 setuptools
 twine
 verif
+wxpython
 xarray
 zarr
