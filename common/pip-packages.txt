@@ -21,6 +21,7 @@ numpy
 packaging
 pandas
 pdoc
+pyarrow
 pygrib
 pyproj
 pytest
