@@ -34,4 +34,5 @@ twine
 verif
 wxpython
 xarray==2024.1.0
+yfinance
 zarr
