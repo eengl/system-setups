@@ -18,10 +18,11 @@ metpy
 mpi4py
 netCDF4
 numba
-numpy
+numpy<2.0.0
 packaging
 pandas
 pdoc
+pint-xarray
 pyarrow
 pygrib
 pyproj
