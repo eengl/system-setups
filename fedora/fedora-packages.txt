@@ -38,6 +38,8 @@ open-vm-tools-desktop
 openconnect
 openjpeg2
 openjpeg2-devel
+openmpi
+openmpi-devel
 openssl
 openssl-devel
 proj

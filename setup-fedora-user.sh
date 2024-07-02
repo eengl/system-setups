@@ -15,7 +15,7 @@ else
 fi
 
 # ---------------------------------------------------------------------------------------- 
-# Make a local bin directory
+# Make directories
 # ---------------------------------------------------------------------------------------- 
 if [ ! -d $HOME/.local/bin ]; then mkdir -p $HOME/.local/bin; fi
 
@@ -45,3 +45,13 @@ cp -v common/ssh-config $HOME/.ssh/config
 # Install PyEnv
 # ----------------------------------------------------------------------------------------
 curl https://pyenv.run | bash
+
+# ----------------------------------------------------------------------------------------
+# Setup Git Configuration
+# ----------------------------------------------------------------------------------------
+sed "s/<HOME>/$HOME/g" common/dot-gitconfig > $HOME/.gitconfig
+for type in personal work
+do
+   echo " ===== Create GitHub User Config for $type ===== " 
+   ./helpers/make-gitconfig-user.sh
+done
