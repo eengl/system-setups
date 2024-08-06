@@ -37,5 +37,6 @@ twine
 verif
 wxpython
 xarray
+xhistogram
 yfinance
 zarr
