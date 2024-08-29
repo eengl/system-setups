@@ -5,40 +5,30 @@
 # ----------------------------------------------------------------------------------------
 # Function to get the current Git branch
 # ----------------------------------------------------------------------------------------
-parse_git_branch()
+check_git()
 {
-    git branch 2>/dev/null | sed -n '/\* /s///p' | sed -e 's/^/(/g' -e 's/$/) /g'
-}
-
-# ----------------------------------------------------------------------------------------
-# Function: startSSHAgent
-# ----------------------------------------------------------------------------------------
-startSSHAgent()
-{
-   eval `ssh-agent` 1> /dev/null 2>&1
+   # Test if in a git repo
+   git rev-parse --is-inside-work-tree > /dev/null 2>&1
    if [ $? -eq 0 ]; then
-      ssh-add 1> /dev/null 2>&1
-      echo -e "\n * Starting SSH Agent... \n"
-      echo -e " * SSH Agent PID = $SSH_AGENT_PID"
-      echo -e " * SSH Agent Socket = $SSH_AUTH_SOCK\n"
-   else
-      echo -e "\n * Error: Trouble starting SSH agent.\n"
-      exit 1
+      # In a git repo, get branch name
+      # Get git branch name
+      name=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+      # Test if git repo is from gerrit
+      git config --get remote.origin.url | grep -q gerrit 
+      if [ $? -eq 0 ]; then
+	 # From gerrit.
+         # Get root of the clone, and check for commit-msg file
+         clone_root=$(git rev-parse --show-toplevel)
+         find $clone_root -name "commit-msg" -type f | grep -q "commit-msg"
+         if [ $? -eq 0 ]; then
+            status=""
+         else
+            status="!"
+         fi
+      else
+         # Not from Gerrit
+         status=""
+      fi
+      echo "(${status}${name})"
    fi
-}
-
-# ----------------------------------------------------------------------------------------
-# Function: stopSSHAgent
-# ----------------------------------------------------------------------------------------
-stopSSHAgent()
-{
-   ssh-agent -k 1> /dev/null 2>&1
-   if [ $? -eq 0 ]; then
-      echo -e "\n * Stopping SSH Agent... \n"
-      unset SSH_AGENT_PID
-      unset SSH_AUTH_SOCK
-   else
-      echo -e "\n * Error: Trouble stopping SSH agent.\n"
-   fi
-
 }
