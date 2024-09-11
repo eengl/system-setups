@@ -24,6 +24,7 @@ packaging
 pandas
 pdoc
 pint-xarray
+polars
 pyarrow
 pygrib
 pyproj
