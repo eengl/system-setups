@@ -33,6 +33,7 @@ netcdf-static
 netcdf-fortran
 netcdf-fortran-devel
 netcdf-fortran-static
+nmap
 open-vm-tools
 open-vm-tools-desktop
 openconnect
