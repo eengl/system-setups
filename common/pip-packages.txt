@@ -7,7 +7,9 @@ dask[dataframe]
 dask-labextension
 dask-mpi
 distributed
+fireducks
 fprettify
+herbie
 ipyleaflet
 ipython
 jupyterlab
