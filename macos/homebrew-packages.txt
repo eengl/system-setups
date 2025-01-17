@@ -2,6 +2,7 @@ apr
 apr-util
 autoconf
 ca-certificates
+clang-format
 cmake
 eccodes
 gcc
