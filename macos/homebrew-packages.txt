@@ -32,6 +32,7 @@ lmod
 lua
 lz4
 m4
+mp4v2
 mpfr
 nceplibs-g2c
 nceplibs-ip
