@@ -23,6 +23,7 @@ libevent
 libidn2
 libmpc
 libnghttp2
+libomp
 libpng
 libtasn1
 libtiff
@@ -36,7 +37,6 @@ mp4v2
 mpfr
 nceplibs-g2c
 nceplibs-ip
-nceplibs-sp
 nco
 netcdf
 netcdf-fortran
