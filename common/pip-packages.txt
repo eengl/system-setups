@@ -2,7 +2,7 @@ boto3
 build
 cartopy
 cython
-dask
+dask==2024.12.1
 dask[dataframe]
 dask-labextension
 dask-mpi
@@ -21,7 +21,7 @@ metpy
 mpi4py
 netCDF4
 numba
-numpy<2.0.0
+numpy
 packaging
 pandas
 pdoc
